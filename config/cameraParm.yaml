@@ -1,0 +1,187 @@
+%YAML:1.0
+---
+
+# 分辨率
+RGB_width: 848
+RGB_height: 480 
+RGB_fps: 60
+depth_width: 848
+depth_height: 480 
+depth_fps: 60
+# IR相机分辨率
+infrared_width: 848
+infrared_height: 480
+infrared_fps: 90
+
+DEPTH_camera: 
+   # 激光功率
+   - { option: Laser Power, index: 13, value: 0.0 }
+   # 是否开启红外散斑
+   - { option: Emitter Enabled, index: 18, value: 0 }
+
+
+# RGB相机参数 改后面的value值
+RGB_camera:
+   # 启用/禁用背光补偿
+   - { option: Backlight Compensation, index: 0, value: 0 }
+
+   # UVC图像亮度 -64~64
+   - { option: Brightness, index: 1, value: 0.0 }
+
+   # UVC图像对比度 0~100
+   - { option: Contrast, index: 2, value: 50.0 }
+   
+   # 控制彩色相机的曝光时间。设置任何值将禁用自动曝光 1~10000 
+   - { option: Exposure, index: 3, value: 160.0 }
+   
+   # UVC图像增益 0~128
+   - { option: Gain, index: 4, value: 64.0 }
+   
+   # UVC图像伽马设置 100~500
+   - { option: Gamma, index: 5, value: 300.0 }
+   
+   # UVC图像色调 -180~180
+   - { option: Hue, index: 6, value: 0.0 }
+   
+   # UVC图像饱和度设置 0~100
+   - { option: Saturation, index: 7, value: 64.0 }
+   
+   # UVC图像锐度设置 0~100
+   - { option: Sharpness, index: 8, value: 50.0 }
+   
+   # 控制彩色图像的白平衡。设置任何值将禁用自动白平衡 2800~6500
+   - { option: White Balance, index: 9, value: 4600.0 }
+   
+   # 启用/禁用自动曝光
+   - { option: Enable Auto Exposure, index: 10, value: 0 }
+   
+   # 启用/禁用自动白平衡
+   - { option: Enable Auto White Balance, index: 11, value: 0 }
+
+
+# 0: Backlight Compensation is not supported
+#   1: Brightness is not supported
+#   2: Contrast is not supported
+#   3: Exposure
+#        Description   : Depth Exposure (usec)
+#        Current Value : 33000
+#   4: Gain
+#        Description   : UVC image gain
+#        Current Value : 16
+#   5: Gamma is not supported
+#   6: Hue is not supported
+#   7: Saturation is not supported
+#   8: Sharpness is not supported
+#   9: White Balance is not supported
+#   10: Enable Auto Exposure
+#        Description   : Enable Auto Exposure
+#        Current Value : 1
+#   11: Enable Auto White Balance is not supported
+#   12: Visual Preset
+#        Description   : Advanced-Mode Preset
+#        Current Value : 0
+#   13: Laser Power
+#        Description   : Manual laser power in mw. applicable only when laser power mode is set to Manual
+#        Current Value : 150
+#   14: Accuracy is not supported
+#   15: Motion Range is not supported
+#   16: Filter Option is not supported
+#   17: Confidence Threshold is not supported
+#   18: Emitter Enabled
+#        Description   : Emitter select, 0-disable all emitters, 1-enable laser, 2-enable laser auto (opt), 3-enable LED (opt)
+#        Current Value : 1
+#   19: Frames Queue Size
+#        Description   : Max number of frames you can hold at a given time. Increasing this number will reduce frame drops but increase latency, and vice versa
+#        Current Value : 16
+#   20: Total Frame Drops is not supported
+#   21: Auto Exposure Mode is not supported
+#   22: Power Line Frequency is not supported
+#   23: Asic Temperature is not supported
+#   24: Error Polling Enabled
+#        Description   : Enable / disable polling of camera internal errors
+#        Current Value : 1
+#   25: Projector Temperature is not supported
+#   26: Output Trigger Enabled
+#        Description   : Generate trigger from the camera to external device once per frame
+#        Current Value : 0
+#   27: Motion Module Temperature is not supported
+#   28: Depth Units
+#        Description   : Number of meters represented by a single depth unit
+#        Current Value : 0.001
+#   29: Enable Motion Correction is not supported
+#   30: Auto Exposure Priority is not supported
+#   31: Color Scheme is not supported
+#   32: Histogram Equalization Enabled is not supported
+#   33: Min Distance is not supported
+#   34: Max Distance is not supported
+#   35: Texture Source is not supported
+#   36: Filter Magnitude is not supported
+#   37: Filter Smooth Alpha is not supported
+#   38: Filter Smooth Delta is not supported
+#   39: Holes Fill is not supported
+#   40: Stereo Baseline
+#        Description   : Distance in mm between the stereo imagers
+#        Current Value : 94.9052
+#   41: Auto Exposure Converge Step is not supported
+#   42: Inter Cam Sync Mode
+#        Description   : Inter-camera synchronization mode: 0:Default, 1:Master, 2:Slave, 3:Full Salve, 4-258:Genlock with burst count of 1-255 frames for each trigger, 259 and 260 for two frames per trigger with laser ON-OFF and OFF-ON.
+#        Current Value : 0
+#   43: Stream Filter is not supported
+#   44: Stream Format Filter is not supported
+#   45: Stream Index Filter is not supported
+#   46: Emitter On Off
+#        Description   : Alternating emitter pattern, toggled on/off on per-frame basis
+#        Current Value : 0
+#   47: Zero Order Point X is not supported
+#   48: Zero Order Point Y is not supported
+#   49: LDD temperature is not supported
+#   50: Mc Temperature is not supported
+#   51: Ma Temperature is not supported
+#   52: Hardware Preset is not supported
+#   53: Global Time Enabled
+#        Description   : Enable/Disable global timestamp
+#        Current Value : 1
+#   54: Apd Temperature is not supported
+#   55: Enable Mapping is not supported
+#   56: Enable Relocalization is not supported
+#   57: Enable Pose Jumping is not supported
+#   58: Enable Dynamic Calibration is not supported
+#   59: Depth Offset is not supported
+#   60: Led Power is not supported
+#   61: Zero Order Enabled is not supported
+#   62: Enable Map Preservation is not supported
+#   63: Freefall Detection Enabled is not supported
+#   64: Receiver Gain is not supported
+#   65: Post Processing Sharpening is not supported
+#   66: Pre Processing Sharpening is not supported
+#   67: Noise Filtering is not supported
+#   68: Invalidation Bypass is not supported
+#   69: Digital Gain is not supported
+#   70: Sensor Mode is not supported
+#   71: Emitter Always On
+#        Description   : Emitter always on mode: 0:disabled(default), 1:enabled
+#        Current Value : 0
+#   72: Thermal Compensation
+#        Description   : Toggle thermal compensation adjustments mechanism
+#        Current Value : 1
+#   73: Trigger Camera Accuracy Health is not supported
+#   74: Reset Camera Accuracy Health is not supported
+#   75: Host Performance is not supported
+#   76: Hdr Enabled
+#        Description   : HDR Option
+#        Current Value : 0
+#   77: Sequence Name
+#        Description   : HDR Option
+#        Current Value : 0
+#   78: Sequence Size
+#        Description   : HDR Option
+#        Current Value : 2
+#   79: Sequence Id
+#        Description   : HDR Option
+#        Current Value : 0
+#   80: Humidity Temperature is not supported
+#   81: Enable Max Usable Range is not supported
+#   82: Alternate IR is not supported
+#   83: Noise Estimation is not supported
+#   84: Enable IR Reflectivity is not supported
+#   85: Auto Exposure Limit
